@@ -19,6 +19,6 @@ public interface BookRepository extends JpaRepository<Book, Integer> {
     @Query(value="Select Book_ID from BooK where BorrowerMemNo IS NOT NULL",nativeQuery = true)
     List<Integer> findAllBorrowedBookId();
 
-   // @Query(value="Select callnumber from book where group by callnumber having count(*)<=?1",nativeQuery = true)
-    //List<String> findBooklessthan(Integer num);
+   @Query(value="Select callnumber from book group by callnumber having count(*)<=?1",nativeQuery = true)
+    List<String> findBooklessthan(Integer num);
 }

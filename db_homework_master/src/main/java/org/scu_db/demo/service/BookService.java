@@ -9,5 +9,5 @@ public interface BookService {
     List<Book> findBookById(Integer Id);
     List<Book> findBookByIdUseSql(Integer Id);
     List<Integer> findAllBorrowedBookId();
-  //  List<String> findBooklessthan(Integer num);
+    List<String> findBooklessthan(Integer num);
 }

@@ -34,7 +34,7 @@ public class BookServiceImpl implements BookService {
         return bookRepository.findAllBorrowedBookId();
     }
 
-   // @Override
-    //public List<String> findBooklessthan(Integer num){return bookRepository.findBooklessthan(num);}
+   @Override
+    public List<String> findBooklessthan(Integer num){return bookRepository.findBooklessthan(num);}
 
 }

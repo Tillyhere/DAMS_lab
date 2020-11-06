@@ -87,10 +87,12 @@ public class HomeworkController {
         //查询本数不超过2本的图书的callnumber号。(对应第7题)
         List<String> callnumbers = new ArrayList<String>();
         //------------在此之下写下执行代码--------------
+        callnumbers=bookService.findBooklessthan(2);
+        /*
         List<Book> books = bookService.findAllBooks();
         Map<String, Integer> map = new HashMap<String, Integer>();
         for (int i = 0; i < books.size(); i++) {
-            // callnumbers=bookService.findBooklessthan(2);
+
             String temp = books.get(i).getCallnumber();
             Integer count = map.get(temp);
             map.put(temp, (count == null) ? 1 : count + 1);
@@ -99,7 +101,7 @@ public class HomeworkController {
             if (map.get(key) <= 2) {
                 callnumbers.add(key);
             }
-        }
+        }*/
         //-----------在此之上写下执行代码---------------
         return callnumbers;//TODO:修改返回值为books
     }
